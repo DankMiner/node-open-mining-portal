@@ -1,0 +1,76 @@
+{
+    "enabled": true,
+    "coin": "briskcoin",
+    
+    "address": "YOUR_BRISKCOIN_WALLET_ADDRESS",
+    
+    "rewardRecipients": {
+        "YOUR_FEE_ADDRESS": 1.5,
+        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+    },
+    
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 600,
+        "minimumPayment": 1.0,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 4233,
+            "user": "briskcoinrpc",
+            "password": "your_secure_password_here"
+        }
+    },
+    
+    "ports": {
+        "3332": {
+            "diff": 8,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3333": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 16,
+                "maxDiff": 1024,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3334": {
+            "diff": 256
+        }
+    },
+    
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 4233,
+            "user": "briskcoinrpc",
+            "password": "your_secure_password_here"
+        }
+    ],
+    
+    "p2p": {
+        "enabled": true,
+        "host": "127.0.0.1",
+        "port": 4234,
+        "disableTransactions": true
+    },
+    
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "briskcoin",
+        "checkPassword": true,
+        "autoCreateWorker": false
+    }
+}
